@@ -1,0 +1,6 @@
+id,timestamp,mood_score,mood_label,latitude,longitude,video_uri,notes
+5,"2025-11-27T09:16:33.434Z",3,"普通",25.0218806,121.543199,"file:///data/user/0/com.emogo.esm/cache/Camera/4347628e-949f-4939-b285-e4f0e7f5b1cd.mp4",""
+4,"2025-11-27T07:36:24.009Z",5,"非常好",25.0215366,121.5349318,"file:///data/user/0/com.emogo.esm/cache/Camera/0ca49677-da21-4640-b275-914883247e38.mp4",""
+3,"2025-11-27T03:58:41.952Z",4,"不錯",25.0518316,121.5495786,"file:///data/user/0/com.emogo.esm/cache/Camera/7c691b23-c38d-4a8a-bba1-f2f6c9d552d2.mp4",""
+2,"2025-11-27T00:55:36.362Z",5,"非常好",25.0579048,121.5496054,"file:///data/user/0/com.emogo.esm/cache/Camera/7c8118fb-d810-43f9-bc52-287729a8adac.mp4",""
+1,"2025-11-26T23:48:34.600Z",3,"普通",24.9847902,121.5543439,"file:///data/user/0/com.emogo.esm/cache/Camera/b3a72a62-7325-426d-996d-fa95d28dd04a.mp4",""

@@ -1,0 +1,72 @@
+{
+  "appName": "EmoGo ESM App",
+  "exportDate": "2025-11-27T09:16:37.881Z",
+  "totalRecords": 5,
+  "timeRange": {
+    "firstRecord": "2025-11-26T23:48:34.600Z",
+    "lastRecord": "2025-11-27T09:16:33.434Z",
+    "durationHours": 9.466342777777777
+  },
+  "records": [
+    {
+      "id": 5,
+      "timestamp": "2025-11-27T09:16:33.434Z",
+      "moodScore": 3,
+      "moodLabel": "普通",
+      "location": {
+        "latitude": 25.0218806,
+        "longitude": 121.543199
+      },
+      "videoUri": "file:///data/user/0/com.emogo.esm/cache/Camera/4347628e-949f-4939-b285-e4f0e7f5b1cd.mp4",
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-11-27T07:36:24.009Z",
+      "moodScore": 5,
+      "moodLabel": "非常好",
+      "location": {
+        "latitude": 25.0215366,
+        "longitude": 121.5349318
+      },
+      "videoUri": "file:///data/user/0/com.emogo.esm/cache/Camera/0ca49677-da21-4640-b275-914883247e38.mp4",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-11-27T03:58:41.952Z",
+      "moodScore": 4,
+      "moodLabel": "不錯",
+      "location": {
+        "latitude": 25.0518316,
+        "longitude": 121.5495786
+      },
+      "videoUri": "file:///data/user/0/com.emogo.esm/cache/Camera/7c691b23-c38d-4a8a-bba1-f2f6c9d552d2.mp4",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-11-27T00:55:36.362Z",
+      "moodScore": 5,
+      "moodLabel": "非常好",
+      "location": {
+        "latitude": 25.0579048,
+        "longitude": 121.5496054
+      },
+      "videoUri": "file:///data/user/0/com.emogo.esm/cache/Camera/7c8118fb-d810-43f9-bc52-287729a8adac.mp4",
+      "notes": ""
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-11-26T23:48:34.600Z",
+      "moodScore": 3,
+      "moodLabel": "普通",
+      "location": {
+        "latitude": 24.9847902,
+        "longitude": 121.5543439
+      },
+      "videoUri": "file:///data/user/0/com.emogo.esm/cache/Camera/b3a72a62-7325-426d-996d-fa95d28dd04a.mp4",
+      "notes": ""
+    }
+  ]
+}

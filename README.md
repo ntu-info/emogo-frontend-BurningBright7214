@@ -68,7 +68,10 @@ emogo-frontend-BurningBright7214/
 │   ├── location.js         # GPS 定位功能
 │   └── notifications.js    # 通知管理
 ├── assets/                 # 靜態資源
-├── data/                   # 匯出的資料 (請手動建立)
+├── data/                   # 匯出的資料
+│   ├── videos/             # 匯出的影片檔案
+│   ├── *.json              # JSON 匯出檔 (包含全部歷史紀錄與統計)
+│   └── *.csv               # CSV 匯出檔 (包含全部歷史紀錄)
 ├── app.json
 ├── package.json
 └── README.md
@@ -95,6 +98,8 @@ npx expo start
 - 或使用 USB 連接執行 `npx expo run:android` / `npx expo run:ios`
 
 ## 📊 資料格式
+
+**注意：匯出的 JSON 與 CSV 檔案皆包含資料庫內所有的歷史記錄，並非僅限當次操作。**
 
 ### JSON 匯出範例
 
@@ -142,16 +147,16 @@ npx expo start
 
 ### 資料收集要求
 
-- [ ] 至少 3 筆記錄
-- [ ] 時間跨度 > 12 小時
+- [x] 至少 3 筆記錄
+- [x] 時間跨度 > 12 小時
 
 ## 📁 Data 資料夾
 
-請在完成資料收集後：
+此資料夾包含實際測試收集的數據：
 
-1. 從 App 的「設定」頁面匯出 JSON 和 CSV 檔案
-2. 將匯出的檔案放入 `data/` 資料夾
-3. 影片檔案也一併放入 `data/videos/` 資料夾
+1. `*.json`: 完整資料庫匯出，包含統計資訊。
+2. `*.csv`: 完整資料庫匯出，試算表格式。
+3. `videos/`: 每次紀錄對應的 1 秒 Vlog 影片檔。
 
 ## 🤖 AI 協作紀錄
 
