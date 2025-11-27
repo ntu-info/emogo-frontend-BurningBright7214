@@ -1,0 +1,6 @@
+# 此資料夾用於存放匯出的資料
+# 請將以下檔案放入此資料夾：
+# - emogo_export_YYYY-MM-DD.json
+# - emogo_export_YYYY-MM-DD.csv
+# - videos/ (影片檔案資料夾)
+

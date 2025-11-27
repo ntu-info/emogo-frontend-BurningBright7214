@@ -1,28 +1,172 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/1M59WghA)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21794952&assignment_repo_type=AssignmentRepo)
-# Expo Router Minimal Working Example
+# EmoGo ESM App 🎭
 
-This is a very small Expo project using **expo-router** with:
+**經驗取樣法 (Experience Sampling Method) 情緒記錄 App**
 
-- A root `Stack` layout
-- A `(tabs)` group using `Tabs`
-- A `details` screen pushed on top of the tab stack
-- `Link` components and `useRouter` for navigation
+一個用於心理學研究的多模態資料收集應用程式，能夠記錄使用者的情緒狀態、GPS 位置和 1 秒鐘 Vlog。
 
-## How to run
+## 📱 App 連結
 
-1. Install dependencies:
+**📥 Android APK 下載連結**:  
+https://expo.dev/accounts/blake_su/projects/emogo-esm-app/builds/9774b31c-7d52-4e1d-8905-7396e98f40f1
 
-   ```bash
-   npm install
-   # or
-   yarn
-   ```
+## ✨ 功能特色
 
-2. Start the dev server:
+### 1. 情緒問卷 📊
+- 1-5 分情緒評分系統
+- 視覺化的表情符號選擇
+- 可選填的備註欄位
 
-   ```bash
-   npx expo start --tunnel
-   ```
+### 2. 1 秒 Vlog 🎬
+- 前後鏡頭切換
+- 3 秒倒數計時
+- 自動錄製 1 秒影片
+- 影片儲存至本地
 
-3. Open the app on a device or emulator using the Expo dev tools.
+### 3. GPS 座標 📍
+- 自動抓取經緯度
+- 高精度定位
+
+### 4. 通知提醒 🔔
+- 每日三次提醒 (09:00, 14:00, 20:00)
+- 可自由開關
+
+### 5. 資料匯出 📤
+- JSON 格式匯出
+- CSV 格式匯出
+- 分享功能
+
+## 🛠️ 技術架構
+
+### 使用的 Expo 套件
+
+| 套件 | 用途 |
+|------|------|
+| `expo-sqlite` | 本地資料庫儲存 |
+| `expo-camera` | 相機錄影功能 |
+| `expo-location` | GPS 定位 |
+| `expo-notifications` | 推播通知提醒 |
+| `expo-file-system` | 檔案管理 |
+| `expo-sharing` | 資料匯出分享 |
+| `expo-media-library` | 媒體檔案存取 |
+| `expo-av` | 影音處理 |
+
+### 專案結構
+
+```
+emogo-frontend-BurningBright7214/
+├── app/
+│   ├── (tabs)/
+│   │   ├── _layout.js      # Tab 導航配置
+│   │   ├── index.js        # 記錄頁面 (首頁)
+│   │   ├── history.js      # 歷史紀錄頁面
+│   │   └── settings.js     # 設定與匯出頁面
+│   ├── camera.js           # 相機錄影頁面
+│   ├── _layout.js          # Root Layout
+│   └── index.js            # 入口重導向
+├── utils/
+│   ├── database.js         # SQLite 資料庫操作
+│   ├── location.js         # GPS 定位功能
+│   └── notifications.js    # 通知管理
+├── assets/                 # 靜態資源
+├── data/                   # 匯出的資料 (請手動建立)
+├── app.json
+├── package.json
+└── README.md
+```
+
+## 🚀 安裝與執行
+
+### 1. 安裝依賴
+
+```bash
+npm install
+```
+
+### 2. 啟動開發伺服器
+
+```bash
+npx expo start
+```
+
+### 3. 在手機上執行
+
+- 下載 **Expo Go** App
+- 掃描終端機顯示的 QR Code
+- 或使用 USB 連接執行 `npx expo run:android` / `npx expo run:ios`
+
+## 📊 資料格式
+
+### JSON 匯出範例
+
+```json
+{
+  "appName": "EmoGo ESM App",
+  "exportDate": "2024-11-26T12:00:00.000Z",
+  "totalRecords": 5,
+  "timeRange": {
+    "firstRecord": "2024-11-25T09:30:00.000Z",
+    "lastRecord": "2024-11-26T10:00:00.000Z",
+    "durationHours": 24.5
+  },
+  "records": [
+    {
+      "id": 1,
+      "timestamp": "2024-11-25T09:30:00.000Z",
+      "moodScore": 4,
+      "moodLabel": "不錯",
+      "location": {
+        "latitude": 25.0330,
+        "longitude": 121.5654
+      },
+      "videoUri": "file:///..../vlog_1732537800000.mp4",
+      "notes": "今天心情不錯"
+    }
+  ]
+}
+```
+
+### CSV 匯出格式
+
+| id | timestamp | mood_score | mood_label | latitude | longitude | video_uri | notes |
+|----|-----------|------------|------------|----------|-----------|-----------|-------|
+| 1  | 2024-11-25T09:30:00.000Z | 4 | 不錯 | 25.0330 | 121.5654 | file:///... | 今天心情不錯 |
+
+## ✅ 作業要求 Checklist
+
+- [x] **情緒問卷** - 結構化、主動數據
+- [x] **1 秒 Vlog** - 非結構化、主動數據
+- [x] **GPS 座標** - 結構化、被動數據
+- [x] **本地儲存** - expo-sqlite
+- [x] **通知提醒** - expo-notifications
+- [x] **資料匯出** - expo-sharing
+
+### 資料收集要求
+
+- [ ] 至少 3 筆記錄
+- [ ] 時間跨度 > 12 小時
+
+## 📁 Data 資料夾
+
+請在完成資料收集後：
+
+1. 從 App 的「設定」頁面匯出 JSON 和 CSV 檔案
+2. 將匯出的檔案放入 `data/` 資料夾
+3. 影片檔案也一併放入 `data/videos/` 資料夾
+
+## 🤖 AI 協作紀錄
+
+本專案使用 Cursor AI 協助開發，對話紀錄請見：
+- `cursor_.md`: 完整開發對話紀錄，包含功能實作、除錯與優化過程。
+
+## 👨‍💻 開發者
+
+- **學號**: [請填入]
+- **姓名**: [請填入]
+
+## 📝 License
+
+MIT License - 僅供教育用途
+
+---
+
+**心理資訊課程作業 © 2024**
